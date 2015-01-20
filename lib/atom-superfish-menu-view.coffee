@@ -47,6 +47,7 @@ class AtomSuperfishMenuView
   createMenu: ->
     @element.empty()
     for item in atom.menu.template
+      if not item or not item.submenu then continue
       menuEl = $ document.createElement('li')
       labelEl = $ document.createElement('a')
       labelEl.text (item.label+'').replace("&", "")
@@ -59,6 +60,7 @@ class AtomSuperfishMenuView
       @element.append menuEl
 
   createSubmenus: (items, el) ->
+    if not items then return
     for item in items
       atom.superfish.items.push item
 
@@ -86,7 +88,7 @@ class AtomSuperfishMenuView
 
           if not atom.commands.registeredCommands[name] then return
           obj = atom.commands.selectorBasedListenersByCommandName[name]
-          if obj and obj.length != 0
+          if obj and obj?.length != 0
             obj = obj[0]
             result = document.querySelector(obj.selector).dispatchEvent new CustomEvent(name, { bubbles: true })
           else
