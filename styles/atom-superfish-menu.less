@@ -1,0 +1,33 @@
+// The ui-variables file is provided by base themes provided by Atom.
+//
+// See https://github.com/atom/atom-dark-ui/blob/master/styles/ui-variables.less
+// for a full listing of what's available.
+@import "ui-variables";
+@import "superfish.less";
+
+.atom-superfish-menu {
+  min-height: 25px;
+  line-height: 25px;
+  background-color: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  padding-left: 15px!important;
+  background-image: -webkit-linear-gradient(top, @app-background-color, @tab-bar-background-color);
+}
+
+.atom-superfish-menu li { font-weight: bold; }
+
+.atom-superfish-menu ul
+{
+  background-color: rgba(0, 0, 0, 0.85);
+  min-width: 150px;
+  left: 30px;
+}
+
+.atom-superfish-menu ul li
+{
+  padding: 5px;
+}
+
+atom-workspace {
+  top: 25px;
+}

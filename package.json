@@ -1,0 +1,13 @@
+{
+  "name": "apex-superfish-menu",
+  "main": "./lib/atom-superfish-menu",
+  "version": "0.0.0",
+  "description": "An atom extension that replaces the existing native menu with one written in Javascript & Jquery, so as to be more completely themeable.",
+  "repository": "https://github.com/gstack/apex-superfish-menu",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {
+  }
+}
