@@ -50,7 +50,7 @@ class AtomSuperfishMenuView
       if not item or not item.submenu then continue
       menuEl = $ document.createElement('li')
       labelEl = $ document.createElement('a')
-      labelEl.text (item.label+'').replace("&", "")
+      labelEl.text (item.label+'').replace("&", "").replace("Atom", "Apex")
       labelEl.attr 'href', '#'
       submenuEl = $ document.createElement('ul')
       menuEl.append labelEl
@@ -77,7 +77,7 @@ class AtomSuperfishMenuView
       labelEl = $ document.createElement('a')
       label = item.label+''
       if item.label
-        label = label.replace("&", "")
+        label = label.replace("&", "").replace("Atom", "Apex")
         labelEl.text label
         labelEl.attr 'href', '#'
         menuEl.append labelEl
